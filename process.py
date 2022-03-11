@@ -21,4 +21,17 @@ def sales_reports(log_file):
             print(line)
 
 # Here the function is called and log_file is passed in as a param
-sales_reports(log_file)
+# sales_reports(log_file)
+
+def greater_ten(log_file):
+    for line in log_file:
+        line = line.rstrip("/n").split(",")
+        # print(line)
+        for quantity in line:
+            quantity = quantity.rstrip("").split(",")
+            print(quantity)
+        # amount = line[0::2]
+        # if amount >= 10:
+        #     print(line)
+
+greater_ten(log_file)
