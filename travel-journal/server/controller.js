@@ -266,11 +266,11 @@ module.exports = {
         .catch(err => console.log(err))
     },
     deleteCity: (req, res) => {
-        let {city_id} = req.params
+        let {cityId} = req.params
         sequelize.query(`
         DELETE
         FROM cities
-        WHERE city_id = ${city_id};
+        WHERE city_id = ${cityId};
         `)
         .then(dbRes => res.status(200).send(dbRes[0]))
         .catch(err => console.log(err))
